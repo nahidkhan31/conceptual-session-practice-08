@@ -9,6 +9,12 @@ const Home = () => {
   const [phones, setPhone] = useState(phoneData);
   const handleSearch = (e, text) => {
     e.preventDefault();
+    if (text === "") {
+      return setPhone(phoneData);
+    }
+    if (text.toLowerCase() === "all".toLowerCase()) {
+      return setPhone(phoneData);
+    }
     const searchedPhones = phoneData.filter(
       (phone) =>
         phone?.name?.toLowerCase().split(" ").includes(text.toLowerCase()) ||

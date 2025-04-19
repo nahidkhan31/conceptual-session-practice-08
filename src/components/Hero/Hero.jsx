@@ -19,7 +19,10 @@ const Hero = ({ handleSearch }) => {
           flagship phones <br /> of the current time - FlagshipFaceOff
         </p>
         <form
-          onSubmit={(e) => handleSearch(e, searchText)}
+          onSubmit={(e) => {
+            handleSearch(e, searchText);
+            setSearchText("");
+          }}
           className="flex flex-col md:flex-row lg:flex-row justify-center items-center mb-4 md:px-24">
           <input
             value={searchText}

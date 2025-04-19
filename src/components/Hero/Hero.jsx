@@ -14,7 +14,7 @@ const Hero = () => {
         </h1>
         <p className="text-gray-500">
           Best place to browse, search, view details and purchase of top
-          flagship phones of the current time - FlagshipFaceOff
+          flagship phones <br /> of the current time - FlagshipFaceOff
         </p>
         <form
           action=""

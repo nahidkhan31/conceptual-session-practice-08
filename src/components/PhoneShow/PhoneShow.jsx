@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const PhoneShow = ({ phone }) => {
-  const { name, image, description } = phone;
+  const { name, image, description, id } = phone;
   return (
     <div>
       <div className="card bg-base-100 shadow-sm">
@@ -13,7 +13,7 @@ const PhoneShow = ({ phone }) => {
           <h2 className="card-title">{name}</h2>
           <p>{description}</p>
           <div className="card-actions justify-end">
-            <Link to="/phone-details">
+            <Link to={`/phone-details/${id}`}>
               <button class="relative inline-block text-lg group cursor-pointer">
                 <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                   <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>

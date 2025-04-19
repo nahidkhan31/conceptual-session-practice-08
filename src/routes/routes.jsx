@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         hydrateFallbackElement: (
           <p className="text-2xl">Lodaing, please wait......</p>
         ),
-        loader: () => fetch("data.json"),
+        loader: () => fetch("../data.json"),
       },
       {
         path: "/favorite",
@@ -29,8 +29,9 @@ const router = createBrowserRouter([
         Component: About,
       },
       {
-        path: "/phone-details",
+        path: "/phone-details/:id",
         Component: PhoneDetails,
+        loader: () => fetch("../data.json"),
       },
     ],
   },
